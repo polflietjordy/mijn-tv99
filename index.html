@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Mijn TV</title>
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
     <style>
-        body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
-        video { width: 100%; height: auto; max-height: 100vh; }
+        body { margin: 0; background: #000; }
+        .video-js { width: 100vw; height: 100vh; }
     </style>
 </head>
 <body>
-    <video controls autoplay>
-        <source src="player.iptvweb.one" type="application/x-mpegURL">
-        Je browser ondersteunt deze speler niet.
+    <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" autoplay>
+        <source src="http://player.iptvweb.one" type="application/x-mpegURL">
     </video>
+
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 </body>
 </html>
